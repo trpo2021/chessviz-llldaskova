@@ -1,6 +1,4 @@
 #include <iostream>
-#include <locale.h>
-#include <math.h>
 using namespace std;
 
 int const n = 8;
