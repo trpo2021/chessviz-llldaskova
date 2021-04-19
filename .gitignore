@@ -1,2 +1,6 @@
-a.out
-main
+chessviz
+main.d
+main.o
+chessviz.d
+chessviz.o
+libchessviz.a
