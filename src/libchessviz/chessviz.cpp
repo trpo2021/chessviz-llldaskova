@@ -398,4 +398,3 @@ int file(int n, char** chessboard)
     fclose(file);
     return 0;
 }
-
