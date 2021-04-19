@@ -45,12 +45,4 @@ clean:
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
 	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
 
-$(OBJ_DIR)/%.o: %.cpp
-	$(CXX) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-
-.PHONY: clean
-clean:
-	$(RM) $(BIN_DIR)/$(APP_NAME) 
-	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
-	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;

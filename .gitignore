@@ -4,3 +4,4 @@ main.o
 chessviz.d
 chessviz.o
 libchessviz.a
+main
