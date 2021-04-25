@@ -3,6 +3,9 @@ LIB_NAME = libchessviz
 
 CFLAGS = -Wall -Werror
 CPPFLAGS = -MMD -I src
+CPPFLAGS_TEST = -I thirdparty -I src -MP -MMD
+LDFLAGS =
+LDLIBS = -lm
 CC = g++
 
 BIN_DIR = bin
@@ -44,5 +47,13 @@ clean:
 	$(RM) $(APP_PATH)
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
 	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
+test: $(APP_PATH_TEST)
 
+-include $(DEPS_TEST)
+
+$(APP_PATH_TEST): $(APP_OBJECTS_TEST) $(LIB_PATH)
+	$(CC) $(CFLAGS) $(CPPFLAGS_TEST) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+
+$(OBJ_DIR)/$(TEST_DIR)/%.o: $(TEST_DIR)/%.cpp
+	$(CC) -c $(CFLAGS) $(CPPFLAGS_TEST) $< -o $@ $(LDLIBS)
 
