@@ -87,7 +87,9 @@ int file(int n, char** chessboard)
             break;
         printf("\n%s", line);
         checkstring(line, pressmark, size_er, error_string);
-        act(pressmark, chessboard, n, error_d_size, error_d);
+        checkstring_print(error_string);
+        int test = 0; //отключение вывода для теста
+        act(pressmark, chessboard, n, error_d_size, error_d, test);
     }
 
     fclose(file);
@@ -106,7 +108,6 @@ void checkstring(char* line, int* chess_string, int size_er, int* error_string)
     add = 6;
     checkstring_side(line, error_string, space, add, chess_string);
     printf("\n");
-    checkstring_print(error_string);
 }
 void checkstring_side(
         char* line, int* error_string, int& space, int add, int* chess_string)
@@ -131,7 +132,7 @@ void checkstring_side(
         chess_string[0 + add] = 78;
         break;
     }
-    if (chess_string[0 + space] != 0) //не пешка и не пустая
+    if (chess_string[0 + add] != 0) //не пешка и не пустая
     {
         space++;
     } else if (
@@ -254,7 +255,13 @@ void checkstring_print(int* error_string)
     }
 }
 
-void act(int* chess_string, char** CH, int n, int error_d_size, int* error_d)
+void act(
+        int* chess_string,
+        char** CH,
+        int n,
+        int error_d_size,
+        int* error_d,
+        int test)
 {
     int i, j, i1, j1, i2, j2, i3, j3;
     for (int i = 0; i < error_d_size; i++) {
@@ -299,9 +306,11 @@ void act(int* chess_string, char** CH, int n, int error_d_size, int* error_d)
     } else if (chess_string[9] == 'x' && CH[i3][j3] == ' ') {
         error_d[5] = 1;
     }
+    if (test == 0) {
+        act_print(chess_string, error_d, CH, i, j, i2, j2);
 
-    act_print(chess_string, error_d, CH, i, j, i2, j2);
-    print_cb(n, CH);
+        print_cb(n, CH);
+    }
 }
 
 void act_print(
