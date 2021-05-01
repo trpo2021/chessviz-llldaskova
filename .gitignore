@@ -1,7 +1,6 @@
-chessviz
-main.d
-main.o
-chessviz.d
-chessviz.o
-libchessviz.a
+*.o
+*.d
+*.a
 main
+bin/chessviz
+bin/chessviz_test
