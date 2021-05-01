@@ -350,4 +350,3 @@ void act_print(
         exit(1);
     }
 }
-
