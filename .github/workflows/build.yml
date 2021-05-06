@@ -16,7 +16,7 @@ jobs:
         run: make
         
       - name: Build test
-        run: make
+        run: make test
         
       - name: Run test
         run: bin/chessviz_test
