@@ -1,7 +1,7 @@
 #include "ctest.h"
 #include "libchessviz/chessviz.h"
 
-CTEST(checkline, test1)
+CTEST(checkline, test_zero_error)
 {
     int size = 12;
     int chess_string[size];
@@ -21,7 +21,7 @@ CTEST(checkline, test1)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test2)
+CTEST(checkline, test_everyerror)
 {
     int size = 12;
     int chess_string[size];
@@ -41,7 +41,7 @@ CTEST(checkline, test2)
     ASSERT_EQUAL(1, real[10]);
     ASSERT_EQUAL(1, real[11]);
 }
-CTEST(checkline, test3)
+CTEST(checkline, test_error6)
 {
     int size = 12;
     int chess_string[size];
@@ -61,7 +61,7 @@ CTEST(checkline, test3)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test4)
+CTEST(checkline, test_error0)
 {
     int size = 12;
     int chess_string[size];
@@ -81,7 +81,7 @@ CTEST(checkline, test4)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test5)
+CTEST(checkline, test_error1)
 {
     int size = 12;
     int chess_string[size];
@@ -101,7 +101,7 @@ CTEST(checkline, test5)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test6)
+CTEST(checkline, test_error2)
 {
     int size = 12;
     int chess_string[size];
@@ -121,7 +121,7 @@ CTEST(checkline, test6)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test7)
+CTEST(checkline, test_error4_5)
 {
     int size = 12;
     int chess_string[size];
@@ -141,7 +141,7 @@ CTEST(checkline, test7)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test8)
+CTEST(checkline, test_error7_8)
 {
     int size = 12;
     int chess_string[size];
@@ -161,7 +161,7 @@ CTEST(checkline, test8)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test9)
+CTEST(checkline, test_error3)
 {
     int size = 12;
     int chess_string[size];
@@ -181,7 +181,7 @@ CTEST(checkline, test9)
     ASSERT_EQUAL(0, real[10]);
     ASSERT_EQUAL(0, real[11]);
 }
-CTEST(checkline, test10)
+CTEST(checkline, test_error9_10_11)
 {
     int size = 12;
     int chess_string[size];
@@ -201,7 +201,7 @@ CTEST(checkline, test10)
     ASSERT_EQUAL(1, real[10]);
     ASSERT_EQUAL(1, real[11]);
 }
-CTEST(check_act, test1)
+CTEST(check_act, test_zero_error)
 {
     int size = 12;
     int chess_string[size];
@@ -228,7 +228,7 @@ CTEST(check_act, test1)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test2)
+CTEST(check_act, test_error0)
 {
     int size = 12;
     int chess_string[size];
@@ -255,7 +255,7 @@ CTEST(check_act, test2)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test3)
+CTEST(check_act, test_error1)
 {
     int size = 12;
     int chess_string[size];
@@ -282,7 +282,7 @@ CTEST(check_act, test3)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test4)
+CTEST(check_act, test_error2)
 {
     int size = 12;
     int chess_string[size];
@@ -309,7 +309,7 @@ CTEST(check_act, test4)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test5)
+CTEST(check_act, test_error3)
 {
     int size = 12;
     int chess_string[size];
@@ -336,7 +336,7 @@ CTEST(check_act, test5)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test6)
+CTEST(check_act, test_error4)
 {
     int size = 12;
     int chess_string[size];
@@ -363,7 +363,7 @@ CTEST(check_act, test6)
     ASSERT_EQUAL(1, error_d[4]);
     ASSERT_EQUAL(0, error_d[5]);
 }
-CTEST(check_act, test7)
+CTEST(check_act, test_error5)
 {
     int size = 12;
     int chess_string[size];
@@ -390,7 +390,7 @@ CTEST(check_act, test7)
     ASSERT_EQUAL(0, error_d[4]);
     ASSERT_EQUAL(1, error_d[5]);
 }
-CTEST(check_act, test8)
+CTEST(check_act, test_error0_5)
 {
     int size = 12;
     int chess_string[size];

@@ -6,11 +6,11 @@
 #include <stdlib.h>
 #include <string.h>
 using namespace std;
-int start_letters = 97;
-int end_letters = 104;
-int start_numbers = 49;
-int end_numbers = 56;
-int alf = 32;
+const int start_letters = 97;
+const int end_letters = 104;
+const int start_numbers = 49;
+const int end_numbers = 56;
+const int alf = 32;
 
 //поле с фигурами
 void default_cb(int n, char** chessboard)
