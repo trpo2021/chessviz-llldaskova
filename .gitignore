@@ -1,0 +1,6 @@
+*.o
+*.d
+*.a
+main
+bin/chessviz
+bin/chessviz_test
